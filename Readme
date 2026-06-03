@@ -1,31 +1,226 @@
-Overview
+# 🚀 EaseFlow Dashboard
 
-EaseFlow is a modern task and project management dashboard designed to help teams organize, track, and manage their work efficiently. The application provides an interactive Kanban-style board where users can create tasks, move them between different stages, assign priorities, set due dates, and collaborate through comments.
-The project focuses on improving workflow management by offering a clean and user-friendly interface with real-time task organization features similar to tools like Trello and Jira.
+A modern full-stack task and project management dashboard built using React.js, Node.js, Express.js, MongoDB, and JWT Authentication.
 
-Key Features
-User Authentication (Login & Signup)
-Interactive Drag-and-Drop Task Board
-Task Status Management (To Do, In Progress, Done)
-Create, Update, and Delete Tasks
-Task Priority and Due Date System
-Team Member Management
-Task Comments and Activity Tracking
-Responsive and Modern UI
-Secure Backend API Integration
+EaseFlow helps teams organize projects, manage tasks, track progress, and collaborate efficiently through an interactive Kanban-style workflow system.
 
-Technologies Used
-Frontend
-React.js
-React Router
-Axios
-Inline CSS Styling
+---
 
-Backend
-Node.js
-Express.js
-Database
-MongoDB
+# ✨ Features
 
-Purpose of the Project
-The main objective of this project is to simplify project tracking and team collaboration through an intuitive dashboard interface. It demonstrates full-stack web development concepts including frontend design, backend API development, authentication, database integration, and state management.
+## 🔐 Authentication
+
+* User Registration
+* User Login
+* JWT Token Authentication
+* Protected Routes
+* Logout Functionality
+
+---
+
+## 📋 Task Management
+
+* Create Tasks
+* Edit Tasks
+* Delete Tasks
+* Drag and Drop Task Movement
+* Task Status Management
+* Task Priority Levels
+* Due Date Management
+
+---
+
+## 📌 Project Board
+
+* Kanban-style Dashboard
+* To Do, In Progress, Done Columns
+* Interactive Task Cards
+* Real-time UI Updates
+* Smooth Drag-and-Drop Experience
+
+---
+
+## 👥 Team Management
+
+* Team Members Page
+* View All Members
+* Remove Members
+* User Role Display
+* Admin Identification
+
+---
+
+## 💬 Comments & Activity
+
+* Add Comments to Tasks
+* Activity Tracking
+* Task Discussion System
+
+---
+
+# 🎨 UI Features
+
+* Responsive Design
+* Modern Dashboard Layout
+* Sidebar Navigation
+* Colorful Task Covers
+* Clean User Interface
+* Interactive Modals
+* Smooth User Experience
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React.js
+* React Router DOM
+* Axios
+* @hello-pangea/dnd
+
+## Backend
+
+* Node.js
+* Express.js
+
+## Database
+
+* MongoDB Atlas
+* Mongoose
+
+## Authentication
+
+* JSON Web Token (JWT)
+
+---
+
+# 📂 Project Structure
+
+easeflow-dashboard/
+
+├── frontend/
+
+│ ├── src/
+
+│ │ ├── pages/
+
+│ │ ├── components/
+
+│ │ ├── App.jsx
+
+│ │ └── main.jsx
+
+│ └── package.json
+
+│
+
+├── backend/
+
+│ ├── models/
+
+│ ├── routes/
+
+│ ├── middleware/
+
+│ ├── controllers/
+
+│ ├── server.js
+
+│ └── package.json
+
+│
+
+└── README.md
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+
+---
+
+## 2️⃣ Install Frontend Dependencies
+
+cd frontend
+
+npm install
+
+---
+
+## 3️⃣ Install Backend Dependencies
+
+cd backend
+
+npm install
+
+---
+
+# ▶️ Run Application
+
+## Start Backend
+
+npm start
+
+or
+
+nodemon server.js
+
+---
+
+## Start Frontend
+
+npm run dev
+
+---
+
+# 🌐 MongoDB Setup
+
+1. Create MongoDB Atlas account
+2. Create Cluster
+3. Connect using MongoDB connection string
+4. Add MongoDB URI inside backend environment variables
+
+---
+
+# 🔑 Environment Variables
+
+Create `.env` file inside backend folder:
+
+PORT=5000
+
+MONGO_URI=YOUR_MONGODB_CONNECTION
+
+JWT_SECRET=YOUR_SECRET_KEY
+
+---
+
+# 📸 Screenshots
+
+* Login Page
+* Dashboard Page
+* Task Board
+* Team Members Page
+* Task Modal
+* Drag and Drop Tasks
+
+(Add screenshots later)
+
+---
+
+# 🚀 Future Improvements
+
+* Dark Mode
+* Real-time Collaboration
+* Task Assignment System
+* Notifications
+* File Attachments
+* Calendar Integration
+* Activity Analytics
+* Mobile Responsive Improvements
+
+---
+
