@@ -1,0 +1,19 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+
+  --primary: #111827;
+  --border: #e5e7eb;
+
+  --todo: #f59e0b;
+  --progress: #3b82f6;
+  --done: #10b981;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+}
