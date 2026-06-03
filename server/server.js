@@ -1,3 +1,4 @@
+import cors from "cors";
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -51,6 +52,7 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/users", userRoutes);
+app.use(cors());
 
 /* ================= TEST ROUTE ================= */
 app.get("/", (req, res) => {
