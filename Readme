@@ -1,0 +1,31 @@
+Overview
+
+EaseFlow is a modern task and project management dashboard designed to help teams organize, track, and manage their work efficiently. The application provides an interactive Kanban-style board where users can create tasks, move them between different stages, assign priorities, set due dates, and collaborate through comments.
+The project focuses on improving workflow management by offering a clean and user-friendly interface with real-time task organization features similar to tools like Trello and Jira.
+
+Key Features
+User Authentication (Login & Signup)
+Interactive Drag-and-Drop Task Board
+Task Status Management (To Do, In Progress, Done)
+Create, Update, and Delete Tasks
+Task Priority and Due Date System
+Team Member Management
+Task Comments and Activity Tracking
+Responsive and Modern UI
+Secure Backend API Integration
+
+Technologies Used
+Frontend
+React.js
+React Router
+Axios
+Inline CSS Styling
+
+Backend
+Node.js
+Express.js
+Database
+MongoDB
+
+Purpose of the Project
+The main objective of this project is to simplify project tracking and team collaboration through an intuitive dashboard interface. It demonstrates full-stack web development concepts including frontend design, backend API development, authentication, database integration, and state management.
