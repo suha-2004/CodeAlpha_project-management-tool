@@ -23,7 +23,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "http://codealpha-project-management-tool-wlx5.onrender.com/api/auth/login",
         {
           email,
           password
