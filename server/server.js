@@ -41,7 +41,7 @@ app.use(express.json());
 
 /* ================= ROUTES ================= */
 const authRoutes = require("./routes/auth");
-const projectRoutes = require("./routes/project.js");
+const projectRoutes = require("./routes/project");
 const taskRoutes = require("./routes/task");
 const commentRoutes = require("./routes/comment");
 const userRoutes = require("./routes/users");
