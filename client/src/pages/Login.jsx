@@ -23,7 +23,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://project-management-tool-1-w98p.onrender.com/api/auth/login",
         {
           email,
           password

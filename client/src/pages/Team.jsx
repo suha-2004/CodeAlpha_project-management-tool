@@ -27,14 +27,14 @@ function Team() {
       };
 
       const userRes = await axios.get(
-        "http://localhost:5000/api/auth/me",
+        "https://project-management-tool-1-w98p.onrender.com/api/auth/me",
         config
       );
 
       setCurrentUser(userRes.data);
 
       const usersRes = await axios.get(
-        "http://localhost:5000/api/users",
+        "https://project-management-tool-1-w98p.onrender.com/api/users",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -63,7 +63,7 @@ function Team() {
         headers: { Authorization: `Bearer ${token}` }
       };
 
-      await axios.delete(`http://localhost:5000/api/users/${id}`, config);
+      await axios.delete(`https://project-management-tool-1-w98p.onrender.com/api/users/${id}`, config);
 
       setTeamMembers((prev) => prev.filter((m) => m._id !== id));
 

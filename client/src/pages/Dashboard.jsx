@@ -170,7 +170,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/projects",
+        "https://project-management-tool-1-w98p.onrender.com/api/projects",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -197,7 +197,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:5000/api/projects",
+        "https://project-management-tool-1-w98p.onrender.com/api/projects",
         newProject,
         {
           headers: {
@@ -235,7 +235,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/projects/${projectId}`,
+        `https://project-management-tool-1-w98p.onrender.com/api/projects/${projectId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

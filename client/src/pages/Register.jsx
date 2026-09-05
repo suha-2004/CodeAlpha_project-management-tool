@@ -14,7 +14,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://project-management-tool-1-w98p.onrender.com/api/auth/register",
         {
           username,
           email,

@@ -40,8 +40,8 @@ function ProjectBoard() {
       setLoading(true);
       const config = { headers: { Authorization: `Bearer ${token}` } };
       const [projectRes, tasksRes] = await Promise.all([
-        axios.get(`http://localhost:5000/api/projects/${id}`, config),
-        axios.get(`http://localhost:5000/api/tasks/${id}`, config)
+        axios.get(`https://project-management-tool-1-w98p.onrender.com/api/projects/${id}`, config),
+        axios.get(`https://project-management-tool-1-w98p.onrender.com/api/tasks/${id}`, config)
       ]);
       setProject(projectRes.data);
       const formattedTasks = (tasksRes.data || []).map(t => ({ ...t, status: (t.status || "todo").toLowerCase() }));
@@ -65,14 +65,14 @@ function ProjectBoard() {
     setTasks(updatedTasks);
 
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${draggableId}`, { status: newStatus }, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.put(`https://project-management-tool-1-w98p.onrender.com/api/tasks/${draggableId}`, { status: newStatus }, { headers: { Authorization: `Bearer ${token}` } });
     } catch (err) { setTasks(tasks); }
   };
 
   const handleAddTask = async (columnId) => {
     if (!newTaskTitle.trim()) return;
     try {
-      const res = await axios.post("http://localhost:5000/api/tasks",
+      const res = await axios.post("https://project-management-tool-1-w98p.onrender.com/api/tasks",
         { title: newTaskTitle, projectId: id, status: columnId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -84,7 +84,7 @@ function ProjectBoard() {
 
   const updateTask = async (taskId, updateData) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/tasks/${taskId}`, updateData, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.put(`https://project-management-tool-1-w98p.onrender.com/api/tasks/${taskId}`, updateData, { headers: { Authorization: `Bearer ${token}` } });
       setTasks(prev => prev.map(t => t._id === taskId ? res.data : t));
       setSelectedTask(res.data);
     } catch (err) { console.log(err); }
@@ -93,7 +93,7 @@ function ProjectBoard() {
   const deleteTask = async (taskId) => {
     if (!window.confirm("Are you sure you want to delete this task?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.delete(`https://project-management-tool-1-w98p.onrender.com/api/tasks/${taskId}`, { headers: { Authorization: `Bearer ${token}` } });
       setTasks(prev => prev.filter(t => t._id !== taskId));
       setSelectedTask(null);
     } catch (err) { console.log(err); }
@@ -102,7 +102,7 @@ function ProjectBoard() {
   const openTaskModal = async (task) => {
     setSelectedTask(task);
     try {
-      const res = await axios.get(`http://localhost:5000/api/comments/${task._id}`, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.get(`https://project-management-tool-1-w98p.onrender.com/api/comments/${task._id}`, { headers: { Authorization: `Bearer ${token}` } });
       setComments(res.data || []);
     } catch (err) { console.log(err); }
   };
@@ -110,7 +110,7 @@ function ProjectBoard() {
   const addComment = async () => {
     if (!commentText.trim()) return;
     try {
-      await axios.post("http://localhost:5000/api/comments",
+      await axios.post("https://project-management-tool-1-w98p.onrender.com/api/comments",
         { text: commentText, taskId: selectedTask._id },
         { headers: { Authorization: `Bearer ${token}` } }
       );
